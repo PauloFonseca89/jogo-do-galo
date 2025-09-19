@@ -17,7 +17,7 @@ export default function JogoDoGalo() {
 
   return (
     <div className="titulo">
-      <h1>Jogo de Futebol do Jogo</h1>
+      <h1>Jogo de Futebol do Galo</h1>
 
       <div className="tabuleiro">
         {jogo.tabuleiro.map((linha, i) => (
