@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("Fundo.svg") no-repeat center center fixed;
+  background-size: cover; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-top: 0px;
+
+}
+
+.campo {
+  background: rgba(0, 0, 0, 0.4); 
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+}
+
+.tabuleiro {
+  display: grid;
+  grid-template-rows: repeat(3, 120px);
+  gap: 5px;
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 5px;
+}
+
+.reiniciar {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.reiniciar img {
+  width: 270px; 
+  height: auto;
+  display: flex;
+}
+
+.reiniciar:hover img {
+  opacity: 0.8; /* Efeito sutil ao passar o mouse */
+}
