@@ -27,14 +27,17 @@ export default function JogoDoGalo() {
                 key={j}
                 className="celula"
                 onClick={() => adicionarJogada(i, j)}
+                disabled={fimDeJogo} // 👈 DESATIVA CLIQUES QUANDO O JOGO ACABOU
               >
-                {celula !== casaVazia ? celula == "X" ? 
-                <img src="./Portoo.png" alt="Ícone de reiniciar" />
-                : 
-                <img src="./Benficaa.png" alt="" />
-                : 
-                " "}
-              
+                {celula !== casaVazia ? (
+                  celula === "X" ? (
+                    <img src="./Portoo.png" alt="Porto" />
+                  ) : (
+                    <img src="./Benficaa.png" alt="Benfica" />
+                  )
+                ) : (
+                  " "
+                )}
               </button>
             ))}
           </div>
@@ -43,11 +46,11 @@ export default function JogoDoGalo() {
 
       <div className="status">
         {vencedor ? (
-          <h2>Vencedor: {vencedor}</h2>
+          <h2>Vencedor: {vencedor === "X" ? "Porto" : "Benfica"}</h2>
         ) : fimDeJogo ? (
           <h2>Não tem Vencedor</h2>
         ) : (
-          <h2>Vez do jogador: {jogo.jogadorAtual}</h2>
+          <h2>Vez do jogador: {jogo.jogadorAtual === "X" ? "Porto" : "Benfica"}</h2>
         )}
       </div>
 
